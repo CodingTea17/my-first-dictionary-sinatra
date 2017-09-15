@@ -1,0 +1,42 @@
+<div class="row">
+  <div class="col-lg-12">
+    <div class="jumbotron">
+      <h1 class="display-3">My First Dictionary!</h1>
+      <p class="lead">The interactive online dictionary you can add words to.</p>
+      <hr class="my-4">
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-12">
+    <div class="card text-center">
+      <div class="card-header">
+        <h3>Your Dictionary</h3>
+      </div>
+      <div class="card-body">
+        
+      </div>
+      <div class="card-footer text-muted">
+        Last updated: TODO
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-12">
+    <div class="card bg-light mb-3">
+      <div class="card-body">
+        <form action="/new_word" method="post">
+          <div class="form-group row">
+            <label id="nw-label" for="nw" class="col-lg-2 col-form-label">Enter a word:</label>
+            <div class="col-lg-10">
+              <input id="nw" name="new_word" class="form-control form-control-lg" type="text" placeholder="Ex. Apple">
+            </div>
+          </div>
+          <button type="button" class="btn btn-primary btn-lg btn-block">Add it to your dictionary!</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

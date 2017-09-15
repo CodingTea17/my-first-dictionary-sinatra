@@ -1,0 +1,12 @@
+.col-lg-12 {
+  margin-bottom: 16px !important;
+}
+.jumbotron {
+  margin-bottom: 0px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#nw-label {
+  font-size: 1.5rem;
+}
