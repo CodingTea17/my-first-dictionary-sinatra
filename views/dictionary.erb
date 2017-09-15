@@ -23,7 +23,7 @@
       </div>
       <div class="card-footer text-muted">
         <!-- COOLEST GEM EVER!!!!!! DECODES THE TIME FROM THE ID HASH!!! Giving me PERFECT, UNIQUE, FUNCTIONAL ids for my site!! -->
-        Last word added @ <%= @current_dictionary.last.decodr %>
+        Last word added @ <%= @last_word.decodr %>
       </div>
     </div>
   </div>
@@ -37,7 +37,7 @@
         <%= "</div>" %>
       <% elsif @error == "saved" %>
         <%= "<div class='alert alert-success' role='alert'>" %>
-          <%= @last_word + " was successfully addded! Keep up the great work!"%>
+          <%= @last_word.the_word + " was successfully addded! Keep up the great work!"%>
         <%= "</div>" %>
       <% else %>
         <%= "<div class='alert alert-danger' role='alert'>" %>

@@ -12,8 +12,8 @@ post('/new_word') do
   word = Word.new(params["new_word"])
   status = word.save()
   @current_dictionary = Word.sort
+  @last_word = Word.time_sift
   if status == "saved"
-    @last_word = Word.time_sift.the_word
     @current_dictionary = Word.sort
     @error = status
     erb(:dictionary)
@@ -33,6 +33,7 @@ end
 
 # Originally this was the default route that the POST was redirected to. Now it is used witht the back button.
 get('/dictionary') do
+  @last_word = Word.time_sift.the_word
   @current_dictionary = Word.sort
   @error = "loader"
   erb(:dictionary)
