@@ -27,7 +27,18 @@
     </div>
   </div>
   <div class="col-lg-6">
-    <div class="card bg-light mb-3">
+    <div>
+      <% if @duplicate %>
+        <%= "<div class='alert alert-danger' role='alert'>" %>
+          <%= @duplicate + " could not be added as it already exists. Please try another word."%>
+        <%= "</div>" %>
+      <% else %>
+          <%= "<div class='alert alert-success' role='alert'>" %>
+            <%= @last_word + " was successfully addded! Keep up the great work!"%>
+          <%= "</div>" %>
+      <% end %>
+    </div>
+    <div class="card bg-light">
       <div class="card-body">
         <form action="/new_word" method="post">
           <div class="form-group">

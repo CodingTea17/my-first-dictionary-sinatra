@@ -1,16 +1,32 @@
+a {
+  text-decoration: none !important;
+}
 .col-lg-12 {
   margin-bottom: 16px !important;
+}
+.mb-3 {
+  margin-top: 1rem !important;
 }
 .jumbotron {
   margin-bottom: 0px;
   padding-top: 20px;
   padding-bottom: 20px;
 }
-
+.nav-card {
+  height: 80px !important;
+}
 #nw-label {
   font-size: 1.5rem;
 }
 
 #dictionary-header {
   font-size: 50px;
+  margin-bottom: 0em !important;
+}
+#page-title {
+  font-size: 25px;
+  float: right;
+}
+#ts {
+  float: right;
 }
