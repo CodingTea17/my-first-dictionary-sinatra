@@ -1,11 +1,12 @@
 class Word
   @@dictionary = []
 
-  attr_reader :the_word, :definition
+  attr_reader :the_word, :definition, :creation
 
   def initialize(new_word)
     @the_word = new_word
     @definition = []
+    @creation = Time.new
   end
 
   def self.clear()

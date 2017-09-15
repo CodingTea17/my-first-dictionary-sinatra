@@ -8,10 +8,10 @@
   </div>
 </div>
 <div class="row">
-  <div class="col-lg-12">
+  <div class="col-lg-6">
     <div class="card">
       <div class="card-header">
-        <h3>Your Dictionary</h3>
+        <p id="dictionary-header">Your Dictionary</p>
       </div>
       <div class="card-body">
         <ul>
@@ -21,22 +21,17 @@
         </ul>
       </div>
       <div class="card-footer text-muted">
-        Last updated: TODO
+        Last word added @ <%= @current_dictionary.last.creation.strftime("%m/%d/%Y %l:%M %p") %>
       </div>
     </div>
   </div>
-</div>
-
-<div class="row">
-  <div class="col-lg-12">
+  <div class="col-lg-6">
     <div class="card bg-light mb-3">
       <div class="card-body">
         <form action="/new_word" method="post">
-          <div class="form-group row">
-            <label id="nw-label" for="nw" class="col-lg-2 col-form-label">Enter a word:</label>
-            <div class="col-lg-10">
+          <div class="form-group">
+            <label id="nw-label" for="nw">Enter a word:</label>
               <input id="nw" name="new_word" class="form-control form-control-lg" type="text" placeholder="Ex. Apple">
-            </div>
           </div>
           <button type="submit" class="btn btn-primary btn-lg btn-block">Add it to your dictionary!</button>
         </form>
