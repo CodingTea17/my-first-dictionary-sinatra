@@ -7,7 +7,6 @@
 ## Description
 My First dictionary utilizes ruby to create, store, and retrieve a list of Word objects. A user can create a word and add it to list. When they click on a word they are taken to a definition page where they can provide multiple definitions for it. There's a link that lets the user list all of the words and definitions they have in their dictionary. This application comes with built in error checking for word duplication, empty words, and empty definitions; providing the user friendly, color-coded error messages.
 
-
 #### To Test Locally
 * `git clone https://github.com/CodingTea17/my-first-dictionary-sinatra` into your desired directory.
 * `cd my-first-dictionary-sinatra`
@@ -17,6 +16,7 @@ My First dictionary utilizes ruby to create, store, and retrieve a list of Word 
 * Visit localhost:4567
 
 #### For a Live Version
+Visit https://my-first-dictionary.herokuapp.com
 
 ## Technologies Used
 _HTML,CSS,Ruby,Sinatra_
