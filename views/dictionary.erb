@@ -9,6 +9,26 @@
 </div>
 <div class="row">
   <div class="col-lg-12">
+    <div class="card">
+      <div class="card-header">
+        <h3>Your Dictionary</h3>
+      </div>
+      <div class="card-body">
+        <ul>
+        <% @current_dictionary.each do |word| %>
+          <li><%= word.the_word %></li>
+        <% end %>
+        </ul>
+      </div>
+      <div class="card-footer text-muted">
+        Last updated: TODO
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-12">
     <div class="card bg-light mb-3">
       <div class="card-body">
         <form action="/new_word" method="post">
@@ -18,7 +38,7 @@
               <input id="nw" name="new_word" class="form-control form-control-lg" type="text" placeholder="Ex. Apple">
             </div>
           </div>
-          <button type="submit" class="btn btn-primary btn-lg btn-block">Add your first word to your dictionary!</button>
+          <button type="submit" class="btn btn-primary btn-lg btn-block">Add it to your dictionary!</button>
         </form>
       </div>
     </div>
