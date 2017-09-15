@@ -1,5 +1,17 @@
+body {
+  background-color: #E8EAF6;
+}
 a {
   text-decoration: none !important;
+}
+.bg-primary {
+  background-color: #3F51B5 !important;
+}
+.btn-primary {
+  background-color: #3F51B5 !important;
+}
+.btn-primary:hover {
+  background-color: #5C6BC0 !important;
 }
 .col-lg-12 {
   margin-bottom: 16px !important;
