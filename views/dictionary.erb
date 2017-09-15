@@ -28,16 +28,20 @@
   </div>
   <div class="col-lg-6">
     <div>
-      <% if @duplicate == "loader" %>
+      <% if @error == "loader" %>
 
-      <% elsif @duplicate %>
-        <%= "<div class='alert alert-danger' role='alert'>" %>
-          <%= @duplicate + " could not be added as it already exists. Please try another word."%>
+      <% elsif @error == "NAW" %>
+        <%= "<div class='alert alert-warning' role='alert'>" %>
+          <%= "The word you tried to add was invalid. Please try another word."%>
+        <%= "</div>" %>
+      <% elsif @error == "saved" %>
+        <%= "<div class='alert alert-success' role='alert'>" %>
+          <%= @last_word + " was successfully addded! Keep up the great work!"%>
         <%= "</div>" %>
       <% else %>
-          <%= "<div class='alert alert-success' role='alert'>" %>
-            <%= @last_word + " was successfully addded! Keep up the great work!"%>
-          <%= "</div>" %>
+        <%= "<div class='alert alert-danger' role='alert'>" %>
+          <%= @error + " could not be added as it already exists. Please try another word."%>
+        <%= "</div>" %>
       <% end %>
     </div>
     <div class="card bg-light">

@@ -36,12 +36,17 @@ class Word
 
   def save()
     # built in duplicate word checker
-    @@dictionary.each do |word|
-      if word.the_word.downcase == self.the_word.downcase
-       return false
-     end
+    if self.the_word.gsub(/[^aeiouy]/i, '').length == 0
+      return "NAW"
+    else
+      @@dictionary.each do |word|
+        if word.the_word.downcase == self.the_word.downcase
+          return "duplicate"
+        end
+      end
     end
     @@dictionary.push(self)
+    return "saved"
   end
 
   def add_definition(a_definition)
@@ -49,9 +54,9 @@ class Word
   end
 
   def self.time_sift()
-      temp_dict = @@dictionary.sort_by {|word| @@hashids.decode(word.id)[0]}
-      temp_dict.last
-    end
+    temp_dict = @@dictionary.sort_by {|word| @@hashids.decode(word.id)[0]}
+    temp_dict.last
+  end
 
   def decodr()
     Time.at(@@hashids.decode(self.id)[0]).strftime("%m/%d/%Y %l:%M %p")

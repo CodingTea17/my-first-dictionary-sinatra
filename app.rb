@@ -10,23 +10,28 @@ end
 
 post('/new_word') do
   word = Word.new(params["new_word"])
-  if word.save()
+  status = word.save()
+  @current_dictionary = Word.sort
+
+  if status == "saved"
     @last_word = Word.time_sift.the_word
     @current_dictionary = Word.sort
-    @duplicate = false
+    @error = status
     erb(:dictionary)
     # Super awesome redirect that will reroute the user to a GET route after the new word is saved to the dictionary.   Prevents error when reloading the page after making the POST.
     # redirect '/dictionary'
-  else
-    @current_dictionary = Word.sort
-    @duplicate = word.the_word
+  elsif status == "duplicate"
+    @error = word.the_word
+    erb(:dictionary)
+  elsif status == "NAW"
+    @error = status
     erb(:dictionary)
   end
 end
 
 get('/dictionary') do
   @current_dictionary = Word.sort
-  @duplicate = "loader"
+  @error = "loader"
   erb(:dictionary)
 end
 
