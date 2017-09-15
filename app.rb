@@ -20,6 +20,6 @@ get('/dictionary') do
   erb(:dictionary)
 end
 
-get('/definition/:word') do
+get('/:id') do
 
 end

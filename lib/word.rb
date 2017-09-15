@@ -1,12 +1,17 @@
+require 'hashids'
 class Word
   @@dictionary = []
 
-  attr_reader :the_word, :definition, :creation
+  # Passes a unique value so this applications hashes are unique!
+  @@hashids = Hashids.new("codingtea17")
+
+  attr_reader :the_word, :definition, :creation, :id
 
   def initialize(new_word)
     @the_word = new_word
     @definition = []
-    @creation = Time.new
+    # Generates an id for this word by encoding the Time is was created which can be decoded for later use!
+    @id = @@hashids.encode(Time.new)
   end
 
   def self.clear()
@@ -24,5 +29,9 @@ class Word
 
   def save()
     @@dictionary.push(self)
+  end
+
+  def decodr()
+    Time.at(@@hashids.decode(self.id)[0]).strftime("%m/%d/%Y %l:%M %p")
   end
 end

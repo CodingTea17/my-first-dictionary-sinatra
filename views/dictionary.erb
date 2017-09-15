@@ -16,12 +16,13 @@
       <div class="card-body">
         <ul>
         <% @current_dictionary.each do |word| %>
-          <li><%= word.the_word %></li>
+          <li><a href="/<%= word.id %>"><%= word.the_word %></a></li>
         <% end %>
         </ul>
       </div>
       <div class="card-footer text-muted">
-        Last word added @ <%= @current_dictionary.last.creation.strftime("%m/%d/%Y %l:%M %p") %>
+        <!-- COOLEST GEM EVER!!!!!! DECODES THE TIME FROM THE ID HASH!!! Giving me PERFECT, UNIQUE, FUNCTIONAL ids for my site!! -->
+        Last word added @ <%= @current_dictionary.last.decodr %>
       </div>
     </div>
   </div>
