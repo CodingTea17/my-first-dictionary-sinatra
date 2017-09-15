@@ -28,7 +28,9 @@
   </div>
   <div class="col-lg-6">
     <div>
-      <% if @duplicate %>
+      <% if @duplicate == "loader" %>
+
+      <% elsif @duplicate %>
         <%= "<div class='alert alert-danger' role='alert'>" %>
           <%= @duplicate + " could not be added as it already exists. Please try another word."%>
         <%= "</div>" %>

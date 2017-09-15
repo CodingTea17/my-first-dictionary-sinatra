@@ -30,3 +30,9 @@ a {
 #ts {
   float: right;
 }
+#back {
+  font-size: 25px;
+  float: right;
+  color: white;
+  text-decoration: none;
+}
