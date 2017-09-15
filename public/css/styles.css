@@ -32,7 +32,7 @@ a {
 }
 
 #dictionary-header {
-  font-size: 50px;
+  font-size: 40px;
   margin-bottom: 0em !important;
 }
 #page-title {
@@ -47,4 +47,12 @@ a {
   float: right;
   color: white;
   text-decoration: none;
+}
+#list {
+  float: right;
+  color: white;
+  text-decoration: none;
+}
+#front-page {
+  font-size: 30px !important;
 }
