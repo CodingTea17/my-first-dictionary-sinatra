@@ -10,8 +10,11 @@ My First dictionary utilizes ruby to create, store, and retrieve a list of Word 
 
 #### To Test Locally
 * `git clone https://github.com/CodingTea17/my-first-dictionary-sinatra` into your desired directory.
-* `cd anagram-antigram-findr`
-* Run 'rspec' and the tests will be ran
+* `cd my-first-dictionary-sinatra`
+* `bundle` to install all required gems
+* `rspec` and the tests will be ran
+* `ruby app.rb` will start a localhost server
+* Visit localhost:4567
 
 #### For a Live Version
 
