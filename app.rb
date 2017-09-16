@@ -33,7 +33,7 @@ end
 
 # Originally this was the default route that the POST was redirected to. Now it is used witht the back button.
 get('/dictionary') do
-  @last_word = Word.time_sift.the_word
+  @last_word = Word.time_sift
   @current_dictionary = Word.sort
   @error = "loader"
   erb(:dictionary)
